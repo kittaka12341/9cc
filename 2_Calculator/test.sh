@@ -16,8 +16,11 @@ assert() {
   fi
 }
 
+# expectedは0‐255でなければならない
 assert 0 0
 assert 42 42
 assert 21 "5+20-4"
 assert 41 " 12 + 34 - 5 "
+assert 1 "6 + -5"
+assert 4 "-5 + +9"
 echo OK

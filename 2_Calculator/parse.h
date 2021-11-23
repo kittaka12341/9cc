@@ -10,6 +10,7 @@ bool at_eof();
 Node *new_node(NodeKind kind, Node *lhs, Node *rhs);
 Node *new_node_num(int val);
 Node *primary();
+Node *unary();
 Node *mul();
 Node *expr();
 

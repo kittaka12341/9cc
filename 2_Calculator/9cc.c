@@ -21,7 +21,8 @@ char *user_input;
  @brief コンパイラ
  @details 構文規則
   expr    = mul ("+" mul | "-" mul)*
-  mul     = primary ("*" primary | "/" primary)*
+  mul     = unary ("*" unary | "/" unary)*
+  unary   = ("+" | "-")? primary
   primary = num | "(" expr ")"
 */
 int main(int argc, char **argv) {
